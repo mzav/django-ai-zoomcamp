@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}{{ action }} TODO{% endblock %}
+{% block content %}
+<h1 class="h3 mb-3">{{ action }} TODO</h1>
+
+<form method="post" class="card p-3">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <div class="d-flex gap-2">
+    <button class="btn btn-primary" type="submit">Save</button>
+    <a class="btn btn-secondary" href="{% url 'todos:index' %}">Cancel</a>
+  </div>
+</form>
+
+{% endblock %}
