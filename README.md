@@ -38,6 +38,13 @@ python manage.py createsuperuser
 ```
 Then visit http://127.0.0.1:8000/admin/
 
+## Running tests
+
+Run the Django test suite (uses an isolated in-memory SQLite database by default):
+```
+python manage.py test
+```
+
 ## Project structure
 
 - `manage.py` — Django management script
